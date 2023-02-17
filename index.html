@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burgers for all!</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Inkludera fontawesome för att kunna använda hamburgerikon. -->
+    <script
+      src="https://kit.fontawesome.com/7a6afc2556.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <img src="burger.jpeg" class="burger-logo" alt="Burger logo" />
+      <nav>
+        <ul>
+          <li><a href="#">Länk 1</a></li>
+          <li><a href="#">Länk 2</a></li>
+          <li><a href="#">Länk 3</a></li>
+        </ul>
+        <i id="mobile-menu-icon" class="fa-solid fa-bars fa-2x"></i>
+      </nav>
+      <!-- 
+        Här är en meny som bara ska visas på små skärmar om någon klickar på hamburgermenyn. 
+        Den är därför dold från början. 
+      -->
+      <div id="mobile-menu" class="mobile-menu">
+        <nav>
+          <ul>
+            <li><a href="#">Länk 1</a></li>
+            <hr />
+            <li><a href="#">Länk 2</a></li>
+            <hr />
+            <li><a href="#">Länk 3</a></li>
+          </ul>
+        </nav>
+        <i id="close-mobile-menu-icon" class="fa-solid fa-xmark fa-2x"></i>
+      </div>
+    </header>
+  </body>
+  <script src="app.js"></script>
+</html>

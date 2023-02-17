@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  box-shadow: 1px 10px 52px 0px rgba(0, 0, 0, 0.75);
+}
+
+.burger-logo {
+  margin: 20px;
+  width: 50px;
+}
+
+nav {
+  display: flex; /* gör att hamburger-ikonen ligger på samma rad som listan med länkar*/
+  align-items: center; /* gör att länkarna och ikonen ligger linjerade horisontellt i mitten av menyn*/
+}
+
+nav ul {
+  display: flex; /* gör att listan med länkar blir horisontell*/
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 30px;
+}
+
+#mobile-menu-icon {
+  position: relative;
+  margin-right: 20px;
+  /* ikonen döljs här och visas i media query för små skärmar*/
+  display: none;
+}
+
+.mobile-menu {
+  /* 
+  Den här menyn döljs som standard. 
+  Den kommer visas genom att en eventlyssnare lägger
+  på klassen .visible
+  */
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 75vh;
+  background-color: cornflowerblue;
+}
+
+.mobile-menu.visible {
+  /* Den här klassen visar elementet om det är dolt. */
+  display: block;
+}
+
+/*Styling för länkarna i mobilmenyn.*/
+.mobile-menu nav ul {
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu nav ul li {
+  display: block;
+}
+
+.mobile-menu hr {
+  width: 50%;
+  margin: 40px 0;
+  border-color: cornflowerblue;
+}
+
+#close-mobile-menu-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+/*
+  Den här media queryn bestämmmer hur sidan ser ut på skärmar
+  som är mindre än 600px breda. Det vill säga de flesta mobiler i
+  stående läge. 
+*/
+@media screen and (max-width: 600px) {
+  header {
+    justify-content: space-between; /*Lägger hamburger-ikonen till höger*/
+  }
+
+  #mobile-menu-icon {
+    display: block; /* visar hamburger-ikonen */
+  }
+
+  nav ul {
+    display: none; /* döljer listan med de "vanliga" meny-länkarna */
+  }
+}
